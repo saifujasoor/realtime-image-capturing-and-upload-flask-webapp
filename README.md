@@ -26,7 +26,7 @@ Make sure you have Python, OpenCV, Flask  installed on your system to run this p
 1. Download the contents of the repository <br>
 OR <br> Directly get the project by typing the following commend on your terminal
 ``` 
-git clone https://github.com/saifujasoor/capture-and-upload-flask-webapp.git
+git clone https://github.com/saifujasoor/realtime-image-capturing-and-upload-flask-webapp.git
 ```
 3. Install  the necessary prerequisites  on your system by typing following command
 
