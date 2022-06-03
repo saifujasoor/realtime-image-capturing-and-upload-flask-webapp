@@ -73,9 +73,8 @@ def upload_file():                                       # This method is used t
         return redirect("/")
 
 
-#capture image
-
-@app.route('/static/uploads/')
+#capture from webcam
+@app.route('/capture/')
 def my_link():
     key = cv2. waitKey(1)
     webcam = cv2.VideoCapture(0)
@@ -85,16 +84,16 @@ def my_link():
             cv2.imshow("Capturing", frame)
             key = cv2.waitKey(1)
             
-            if key == ord('s'): 
+            if key == ord('s'):   #press s to save the captured image
                 cv2.waitKey(1000)
                 print("Processing image...")
 
-                path = '/static/uploads/'
+                path = '/home/saifullah/Desktop/github/capture-and-upload-flask-webapp/static/uploads'
                 cv2.imwrite(os.path.join(path , 'frame.jpg'), img=frame)
                 print("Processing image...")
                 img_ = cv2.imread('saved_img.jpg', cv2.IMREAD_ANYCOLOR)
         
-            elif key == ord('q'):
+            elif key == ord('q'):     #press q to close webcam
                 print("Turning off camera.")
                 webcam.release()
                 print("Camera off.")
